@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<django-objects version="1.0">
+    <object pk="1" model="filmy_app.Category">
+        <field type="CharField" name="name">Film</field>
+    </object>
+    <object pk="2" model="filmy_app.Category">
+        <field type="CharField" name="name">Serie</field>
+    </object>
+    <object pk="3" model="filmy_app.Category">
+        <field type="CharField" name="name">Documentary</field>
+    </object>
+    <object pk="4" model="filmy_app.Category">
+        <field type="CharField" name="name">Cartoons</field>
+    </object>
+    <object pk="5" model="filmy_app.Category">
+        <field type="CharField" name="name">Short Film</field>
+    </object>
+
+    <object pk="1" model="filmy_app.AudioInfo">
+        <field type="CharField" name="name">2.1.</field>
+    </object>
+    <object pk="2" model="filmy_app.AudioInfo">
+        <field type="CharField" name="name">5.1.</field>
+    </object>
+    
+    <object pk="1" model="filmy_app.VideoInfo">
+        <field type="CharField" name="name">DVD</field>
+    </object>
+    <object pk="2" model="filmy_app.VideoInfo">
+        <field type="CharField" name="name">Avi</field>
+    </object>
+    <object pk="3" model="filmy_app.VideoInfo">
+        <field type="CharField" name="name">DivX</field>
+    </object>
+    <object pk="4" model="filmy_app.VideoInfo">
+        <field type="CharField" name="name">Mpeg</field>
+    </object>
+    <object pk="5" model="filmy_app.VideoInfo">
+        <field type="CharField" name="name">Mp4</field>
+    </object>
+    
+    <object pk="1" model="filmy_app.Device">
+        <field type="CharField" name="name">DVD</field>
+    </object>
+    <object pk="2" model="filmy_app.Device">
+        <field type="CharField" name="name">Hard Disk</field>
+    </object>
+</django-objects>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<django-objects version="1.0">
+    <object pk="af" model="languages_app.Language"><field type="CharField" name="name">Afrikaans</field></object>
+    <object pk="ar" model="languages_app.Language"><field type="CharField" name="name">Arabic</field></object>
+    <object pk="az" model="languages_app.Language"><field type="CharField" name="name">Azerbaijani</field></object>
+    <object pk="bg" model="languages_app.Language"><field type="CharField" name="name">Bulgarian</field></object>
+    <object pk="be" model="languages_app.Language"><field type="CharField" name="name">Belarusian</field></object>
+    <object pk="bn" model="languages_app.Language"><field type="CharField" name="name">Bengali</field></object>
+    <object pk="br" model="languages_app.Language"><field type="CharField" name="name">Breton</field></object>
+    <object pk="bs" model="languages_app.Language"><field type="CharField" name="name">Bosnian</field></object>
+    <object pk="ca" model="languages_app.Language"><field type="CharField" name="name">Catalan</field></object>
+    <object pk="cs" model="languages_app.Language"><field type="CharField" name="name">Czech</field></object>
+    <object pk="cy" model="languages_app.Language"><field type="CharField" name="name">Welsh</field></object>
+    <object pk="da" model="languages_app.Language"><field type="CharField" name="name">Danish</field></object>
+    <object pk="de" model="languages_app.Language"><field type="CharField" name="name">German</field></object>
+    <object pk="el" model="languages_app.Language"><field type="CharField" name="name">Greek</field></object>
+    <object pk="en" model="languages_app.Language"><field type="CharField" name="name">English</field></object>
+    <object pk="en-au" model="languages_app.Language"><field type="CharField" name="name">Australian English</field></object>
+    <object pk="en-gb" model="languages_app.Language"><field type="CharField" name="name">British English</field></object>
+    <object pk="eo" model="languages_app.Language"><field type="CharField" name="name">Esperanto</field></object>
+    <object pk="es" model="languages_app.Language"><field type="CharField" name="name">Spanish</field></object>
+    <object pk="es-ar" model="languages_app.Language"><field type="CharField" name="name">Argentinian Spanish</field></object>
+    <object pk="es-mx" model="languages_app.Language"><field type="CharField" name="name">Mexican Spanish</field></object>
+    <object pk="es-ni" model="languages_app.Language"><field type="CharField" name="name">Nicaraguan Spanish</field></object>
+    <object pk="es-ve" model="languages_app.Language"><field type="CharField" name="name">Venezuelan Spanish</field></object>
+    <object pk="et" model="languages_app.Language"><field type="CharField" name="name">Estonian</field></object>
+    <object pk="eu" model="languages_app.Language"><field type="CharField" name="name">Basque</field></object>
+    <object pk="fa" model="languages_app.Language"><field type="CharField" name="name">Persian</field></object>
+    <object pk="fi" model="languages_app.Language"><field type="CharField" name="name">Finnish</field></object>
+    <object pk="fr" model="languages_app.Language"><field type="CharField" name="name">French</field></object>
+    <object pk="fy" model="languages_app.Language"><field type="CharField" name="name">Frisian</field></object>
+    <object pk="ga" model="languages_app.Language"><field type="CharField" name="name">Irish</field></object>
+    <object pk="gl" model="languages_app.Language"><field type="CharField" name="name">Galician</field></object>
+    <object pk="he" model="languages_app.Language"><field type="CharField" name="name">Hebrew</field></object>
+    <object pk="hi" model="languages_app.Language"><field type="CharField" name="name">Hindi</field></object>
+    <object pk="hr" model="languages_app.Language"><field type="CharField" name="name">Croatian</field></object>
+    <object pk="hu" model="languages_app.Language"><field type="CharField" name="name">Hungarian</field></object>
+    <object pk="ia" model="languages_app.Language"><field type="CharField" name="name">Interlingua</field></object>
+    <object pk="id" model="languages_app.Language"><field type="CharField" name="name">Indonesian</field></object>
+    <object pk="is" model="languages_app.Language"><field type="CharField" name="name">Icelandic</field></object>
+    <object pk="it" model="languages_app.Language"><field type="CharField" name="name">Italian</field></object>
+    <object pk="ja" model="languages_app.Language"><field type="CharField" name="name">Japanese</field></object>
+    <object pk="ka" model="languages_app.Language"><field type="CharField" name="name">Georgian</field></object>
+    <object pk="kk" model="languages_app.Language"><field type="CharField" name="name">Kazakh</field></object>
+    <object pk="km" model="languages_app.Language"><field type="CharField" name="name">Khmer</field></object>
+    <object pk="kn" model="languages_app.Language"><field type="CharField" name="name">Kannada</field></object>
+    <object pk="ko" model="languages_app.Language"><field type="CharField" name="name">Korean</field></object>
+    <object pk="lb" model="languages_app.Language"><field type="CharField" name="name">Luxembourgish</field></object>
+    <object pk="lt" model="languages_app.Language"><field type="CharField" name="name">Lithuanian</field></object>
+    <object pk="lv" model="languages_app.Language"><field type="CharField" name="name">Latvian</field></object>
+    <object pk="mk" model="languages_app.Language"><field type="CharField" name="name">Macedonian</field></object>
+    <object pk="ml" model="languages_app.Language"><field type="CharField" name="name">Malayalam</field></object>
+    <object pk="mn" model="languages_app.Language"><field type="CharField" name="name">Mongolian</field></object>
+    <object pk="my" model="languages_app.Language"><field type="CharField" name="name">Burmese</field></object>
+    <object pk="nb" model="languages_app.Language"><field type="CharField" name="name">Norwegian Bokmal</field></object>
+    <object pk="ne" model="languages_app.Language"><field type="CharField" name="name">Nepali</field></object>
+    <object pk="nl" model="languages_app.Language"><field type="CharField" name="name">Dutch</field></object>
+    <object pk="nn" model="languages_app.Language"><field type="CharField" name="name">Norwegian Nynorsk</field></object>
+    <object pk="os" model="languages_app.Language"><field type="CharField" name="name">Ossetic</field></object>
+    <object pk="pa" model="languages_app.Language"><field type="CharField" name="name">Punjabi</field></object>
+    <object pk="pl" model="languages_app.Language"><field type="CharField" name="name">Polish</field></object>
+    <object pk="pt" model="languages_app.Language"><field type="CharField" name="name">Portuguese</field></object>
+    <object pk="pt-br" model="languages_app.Language"><field type="CharField" name="name">Brazilian Portuguese</field></object>
+    <object pk="ro" model="languages_app.Language"><field type="CharField" name="name">Romanian</field></object>
+    <object pk="ru" model="languages_app.Language"><field type="CharField" name="name">Russian</field></object>
+    <object pk="sk" model="languages_app.Language"><field type="CharField" name="name">Slovak</field></object>
+    <object pk="sl" model="languages_app.Language"><field type="CharField" name="name">Slovenian</field></object>
+    <object pk="sq" model="languages_app.Language"><field type="CharField" name="name">Albanian</field></object>
+    <object pk="sr" model="languages_app.Language"><field type="CharField" name="name">Serbian</field></object>
+    <object pk="sr-latn" model="languages_app.Language"><field type="CharField" name="name">Serbian Latin</field></object>
+    <object pk="sv" model="languages_app.Language"><field type="CharField" name="name">Swedish</field></object>
+    <object pk="sw" model="languages_app.Language"><field type="CharField" name="name">Swahili</field></object>
+    <object pk="ta" model="languages_app.Language"><field type="CharField" name="name">Tamil</field></object>
+    <object pk="te" model="languages_app.Language"><field type="CharField" name="name">Telugu</field></object>
+    <object pk="th" model="languages_app.Language"><field type="CharField" name="name">Thai</field></object>
+    <object pk="tr" model="languages_app.Language"><field type="CharField" name="name">Turkish</field></object>
+    <object pk="tt" model="languages_app.Language"><field type="CharField" name="name">Tatar</field></object>
+    <object pk="udm" model="languages_app.Language"><field type="CharField" name="name">Udmurt</field></object>
+    <object pk="uk" model="languages_app.Language"><field type="CharField" name="name">Ukrainian</field></object>
+    <object pk="ur" model="languages_app.Language"><field type="CharField" name="name">Urdu</field></object>
+    <object pk="vi" model="languages_app.Language"><field type="CharField" name="name">Vietnamese</field></object>
+    <object pk="zh-cn" model="languages_app.Language"><field type="CharField" name="name">Simplified Chinese</field></object>
+    <object pk="zh-tw" model="languages_app.Language"><field type="CharField" name="name">Traditional Chinese</field></object>
+</django-objects>

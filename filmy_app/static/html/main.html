@@ -1,0 +1,127 @@
+<!--
+                 BARRA DE NAVEGACION(12)
+
+     FILTROS(2)       LISTA VIDEOS/DETALLE VIDEO(10)
+
+-->
+
+<div id="header" class="row">
+    <div class="col-md-12">
+<!----------------------------------------- BARRA DE NAVEGACION ------------------------------------------------------------>
+        <!--Barra de navegacion fija-->
+        <nav class="navbar navbar-default navbar-fixed-top navbar-filmy" role="navigation">
+        <!--Barra de navegacion no fija-->
+        <!--<nav class="navbar navbar-default" role="navigation">-->
+        <!-- El logotipo y el icono que despliega el menú se agrupan para mostrarlos mejor en los dispositivos móviles -->
+        <div class="navbar-header home">
+            <a href="/"><img class="icon" ng-src="/static/favicon.png"></a></img>
+            <a class="navbar-brand homef" href="/">FilMy</a>
+       </div>
+
+        <!-- Agrupar los enlaces de navegación, los formularios y cualquier otro elemento que se pueda ocultar al minimizar la barra -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav" ng-repeat="category in categories | orderBy:'id'" ng-click="">
+                <li ng-class="getCategoryClass(<% category.id %>)"><a href="#/video_category/<% category.id %>"><% category.name %></a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <form class="navbar-form navbar-left loginf" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" size=45 ng-model="search_title" placeholder="Enter a title here"/>
+                    </div>
+                    <button type="submit" class="btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+
+                </form>
+                <li><a href="/api-auth/login/?next=/" class="loginf"><span class="glyphicon glyphicon-user"></span>
+                </a></li>
+            </ul>
+        </div>
+        </nav>
+<!----------------------------------------- FIN BARRA DE NAVEGACION ------------------------------------------------------------>
+    </div>
+</div>
+
+<div id="main" class="row main-container">
+    <div id="filters" class="col-md-2">
+<!----------------------------------------- FILTROS ------------------------------------------------------------>
+        <div class="form-horizontal form-modelos">
+            
+            <div class="form-group">
+                <label for="filterform_title">Title</label>
+                <input type="text" class="form-control" id="filterform_title" placeholder="" ng-model="filtermodel_title" 
+                        ng-show="!filter_title" ng-focus="filter_title=''" ng-enter="filter_title=filtermodel_title">
+		<div ng-show="filter_title">
+                    <span><% filter_title %></span>
+                    <div class="btn glyphicon glyphicon-remove pull-right icon-mag remove" ng-click="filter_title=''; filtermodel_title=''"></div>
+                </div>
+            </div>
+
+            <!--<div class="form-group" ng-bind-html="filter_cast_html()"></div>-->
+            <div class="form-group">
+                <label for="filterform_cast_X">Cast</label>
+		<div ng-repeat="n in [] | range:max_cast_filters">
+                    <div ng-show="showInputFilter(filter_cast, filter_cast_show, n)">
+                        <input type="text" class="form-control filter-multiple-textf" id="filterform_cast_<%n%>" placeholder="" ng-model="filtermodel_cast" 
+				typeahead="actor.name for actor in actors | filter:$viewValue | limitTo:8" typeahead-editable="false" 
+                                ng-enter="updateValue(filter_cast,n,filtermodel_cast); filtermodel_cast=''">
+                        <div class="btn glyphicon glyphicon-eye-open eyef" ng-click="updateValue(filter_cast,n,filtermodel_cast); filtermodel_cast=''"></div>
+                        <div class="btn glyphicon glyphicon-minus-sign icon-mag filter-multiple-buttonf" ng-show="n!=0 && !filtermodel_cast" ng-click="removeValue(filter_cast,filter_cast_show,n); filtermodel_cast=''"></div>
+	    	    </div>
+                    <div ng-show="showReadOnlyFilter(filter_cast, filter_cast_show, n)">
+                        <span class="filter-multiple-textf"><% filter_cast[n] %></span>
+                        <div class="btn glyphicon glyphicon-remove icon-mag remove filter-multiple-buttonf" ng-click="removeFilter(filter_cast, filter_cast_show, n); filtermodel_cast=''"></div>
+                    </div>
+                </div>
+
+                <div class="btn-group btn-group-xs">
+                    <div type="button" class="btn btn-default" style="background:#E9FBE5;" ng-show="showButtonAdd(filter_cast, filter_cast_show)" ng-click="addFilter(filter_cast, filter_cast_show); filtermodel_cast='';">
+                          <span class="glyphicon glyphicon-plus-sign icon-mag" style="padding-right:6px;"></span>
+                          Add Another Cast Filter
+                    </div>
+                </div>
+            </div>
+
+        </div>
+<!----------------------------------------- FIN FILTROS ------------------------------------------------------------>
+    </div>
+    <div id="information" class="col-md-10">
+<!----------------------------------------- TITULO ------------------------------------------------------------>
+        <div class="page-header">
+                <h3>Vas a buscar el titulo <%search_title%></h3>
+	</div>
+<!----------------------------------------- FIN TITULO ------------------------------------------------------------>
+
+<!----------------------------------------- INFORMACION ------------------------------------------------------------>
+	<table class="table table-hover table-striped">
+    	    <thead>
+        	<tr>
+            	    <th><a href="">ID</a></th>
+            	    <th><a href="">Poster</a></th>
+            	    <th><a href="">Title</a></th>
+            	    <th><a href="">Original Title</a></th>
+            	    <th><a href="">Duration</a></th>
+            	    <th><a href="#/new"><i class="glyphicon-plus-sign"></i></a></th>
+        	</tr>
+    	    </thead>
+            <tbody>
+        	<tr ng-repeat="video in videos | filter:search_title | orderBy:'title'" ng-click="">
+            	    <td><% video.id %></td>
+            	    <td><img ng-src="/media/<% video.poster %>"></td>
+            	    <td><% video.title %></td>
+            	    <td><% video.original_title %></td>
+            	    <td><% video.duration %></td>
+            	    <a href="#/edit/{{video.id}}"><i class="glyphicon-pencil"></i></a>
+        	</tr>
+    	    </tbody>
+	</table>
+<!--<th>ID</th>
+            <th ng-click="order = order == 'title' ? '-title' : 'title'"><a href="">Title</a></th>
+ <th ng-click="order = order == 'original_title' ? '-original_title' : 'original_title'"><a href="">Original Title</a></th>
+ <th ng-click="order = order == 'duration' ? '-duration' : 'duration'"><a href="">Duration</a></th>-->
+<!----------------------------------------- FIN INFORMACION ------------------------------------------------------------>
+    </div>
+</div>
+
+
+
